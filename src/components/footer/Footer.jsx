@@ -3,7 +3,7 @@ import cdac from "./images/cdac.png";
 const Footer = () => {
     return (
         <div className="">
-            <footer className="footer footer-center p-10 pt-8 bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg rounded-lg">
+            <footer className="footer footer-center p-10 pt-8 bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg">
                 <img src={cdac} width="100" alt="cdac-logo" className="rounded-full shadow-xl border-4 border-white" />
                 <div className="text-white mt-4">
                     <p className="font-bold text-xl tracking-wide">

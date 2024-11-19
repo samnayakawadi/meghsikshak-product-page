@@ -58,7 +58,7 @@ const GetInTouchModal = () => {
                     <div className="modal-action">
                         <label
                             htmlFor="getInTouchModal"
-                            className="btn bg-gradient-to-r from-indigo-500 to-pink-500 text-white normal-case w-full hover:scale-105 transition-all"
+                            className="btn bg-gradient-to-r from-indigo-500 to-pink-500 text-white normal-case w-full transition-all"
                         >
                             Close
                         </label>

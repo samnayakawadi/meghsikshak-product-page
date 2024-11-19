@@ -2,7 +2,7 @@ import multilingual from "../images/advancedFeatures/multilingual.png"
 
 const Component2 = () => {
     return (
-        <div className="px-5 md:px-20 py-10 md:py-0 bg-gradient-to-r from-indigo-600 via-blue-500 to-teal-400 rounded-lg shadow-xl">
+        <div className="px-5 md:px-20 py-10 bg-gradient-to-r from-indigo-600 via-blue-500 to-teal-400 rounded-lg shadow-xl">
             <div className="flex justify-center items-center gap-10 flex-wrap md:flex-nowrap">
                 <div className="basis-full md:basis-6/12 text-white">
                     <h2 className="text-4xl font-bold leading-snug mb-4">Multilingual Application</h2>

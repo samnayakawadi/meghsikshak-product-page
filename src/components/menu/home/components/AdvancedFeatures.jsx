@@ -17,7 +17,7 @@ const AdvancedFeatures = () => {
     return (
         <div>
             <div>
-                <div className="py-10 md:px-44">
+                <div className="pt-10 pb-20 md:px-44">
                     <div className="text-3xl text-center">Why choose <span className="font-bold">MeghSikshak?</span></div>
                     <div className="pt-2 text-center">
                         A flexible, one-stop solution for all types of online learning

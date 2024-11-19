@@ -3,7 +3,7 @@ import meghsikshak from "./images/hero/meghsikshak.png";
 const Hero = () => {
     return (
         <div id="home">
-            <div className="pt-40 pb-10 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 px-10 md:px-32 shadow-xl rounded-lg">
+            <div className="pt-24 pb-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 px-10 md:px-32 shadow-xl">
                 <div className="flex flex-row flex-wrap justify-center items-center">
                     <div className="basis-full md:basis-7/12">
                         <div className="p-0 md:px-20 text-white">
@@ -21,7 +21,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className="basis-full md:basis-5/12 pt-20 md:py-0 flex flex-row justify-center flex-wrap">
-                        <img alt="MeghSikshak" src={meghsikshak} className="max-w-full rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300" />
+                        <img alt="MeghSikshak" src={meghsikshak} className="max-w-full rounded-xl transform hover:scale-105 transition-transform duration-300" />
                     </div>
                 </div>
             </div>

@@ -10,81 +10,193 @@ import client9 from "./images/clients/mpa.png";
 import client10 from "./images/clients/nsfu.png";
 import client11 from "./images/clients/ppa.png";
 
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 const TrustedBy = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
+
+    const clients = [
+        [
+            {
+                img: client1,
+                name: "Biju Patnaik State Police Academy",
+                url: "http://bpspaorissa.gov.in/",
+                fullName: "Biju Patnaik State Police Academy, Orissa"
+            },
+            {
+                img: client2,
+                name: "Bureau of Police Research & Development",
+                url: "https://eustad.in/",
+                fullName: "Bureau of Police Research & Development, MHA"
+            },
+            {
+                img: client3,
+                name: "Centre for Development of Advanced Computing",
+                url: "https://cakes.cdac.in/MeghSikshak/",
+                fullName: "Centre for Development of Advanced Computing, MeitY"
+            },
+            {
+                img: client4,
+                name: "Chariot Program",
+                url: "https://meghsikshak.in/chariot/",
+                fullName: "Chariot Program"
+            }
+        ],
+        [
+            {
+                img: client5,
+                name: "Centre for Materials for Electronics Technology",
+                url: "https://kaushalvikas.coeonewaste.com/MeghSikshak/",
+                fullName: "Centre for Materials for Electronics Technology, GoI"
+            },
+            {
+                img: client6,
+                name: "National Defence University",
+                url: "https://mfa.gov.mn/en/",
+                fullName: "National Defence University, Ulaanbaatar Mongolia"
+            },
+            {
+                img: client7,
+                name: "Department of Post",
+                url: "https://dakshiksha.gov.in/DakShiksha/",
+                fullName: "Department of Post, India"
+            },
+            {
+                img: client8,
+                name: "Kerala Police Academy",
+                url: "https://lms.keralapoliceacademy.gov.in/DKMS/",
+                fullName: "Kerala Police Academy, Thrissur"
+            }
+        ],
+        [
+            {
+                img: client9,
+                name: "Maharashtra Police Academy",
+                url: "https://www.mpa.com",
+                fullName: "Maharashtra Police Academy"
+            },
+            {
+                img: client10,
+                name: "National Forensic Sciences University",
+                url: "https://www.nsfu.com",
+                fullName: "National Forensic Sciences University"
+            },
+            {
+                img: client11,
+                name: "Punjab Police Academy",
+                url: "https://www.ppa.com",
+                fullName: "Punjab Police Academy"
+            }
+        ]
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % clients.length);
+        }, 5000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % clients.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + clients.length) % clients.length);
+    };
+
+    const handleTouchStart = (e) => {
+        setTouchStart(e.touches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+        setTouchEnd(e.touches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (touchStart - touchEnd > 75) {
+            nextSlide();
+        }
+        if (touchStart - touchEnd < -75) {
+            prevSlide();
+        }
+    };
+
     return (
-        <div className="bg-gradient-to-r from-indigo-600 to-blue-500 py-20">
-            <div className="text-center text-white px-6 md:px-20">
-                <div className="text-4xl font-bold mb-4">Trusted By Prestigious Institutions</div>
-                <p className="text-xl mb-12">Our goal is to ensure our clients are guided and empowered to automate learning processes.</p>
-                <div className="carousel w-full">
-                    <div id="clientSlide1" className="carousel-item relative w-full">
-                        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:gap-12 w-full px-6">
-                            <div className="flex flex-col justify-center items-center">
-                                <img width="150" src={client1} alt="Biju Patnaik State Police Academy" />
-                                <a href="http://bpspaorissa.gov.in/" target="_blank" rel="noreferrer" className="mt-2 text-sm text-white hover:text-teal-200 transition duration-300">Biju Patnaik State Police Academy, Orissa</a>
+        <div className="bg-gradient-to-r from-indigo-600 to-blue-500 py-12 sm:py-16 md:py-20">
+            <div className="container mx-auto text-center text-white">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-4 sm:px-6 md:px-20">
+                    Trusted By Prestigious Institutions
+                </div>
+                <p className="text-sm sm:text-base md:text-xl mb-8 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-6 md:px-20">
+                    Our goal is to ensure our clients are guided and empowered to automate learning processes.
+                </p>
+
+                <div 
+                    className="relative overflow-hidden w-full mx-auto px-5 md:px-32"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
+                    <div className="relative w-full min-h-[400px] sm:min-h-[250px] md:min-h-[300px]">
+                        {clients.map((slide, slideIndex) => (
+                            <div
+                                key={slideIndex}
+                                className={`absolute w-full transition-all duration-500 ease-in-out transform 
+                                    ${slideIndex === currentSlide ? 'translate-x-0 opacity-100' :
+                                        slideIndex < currentSlide ? '-translate-x-full opacity-0' :
+                                            'translate-x-full opacity-0'}`}
+                            >
+                                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 justify-items-center">
+                                    {slide.map((client, index) => (
+                                        <div 
+                                            key={index}
+                                            className="flex flex-col items-center justify-center w-full max-w-[200px] transform transition-transform duration-300 hover:scale-105"
+                                        >
+                                            <div className="bg-white/10 rounded-lg p-4 sm:p-6 backdrop-blur-sm w-full flex justify-center items-center">
+                                                <img
+                                                    src={client.img}
+                                                    alt={client.name}
+                                                    className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
+                                                />
+                                            </div>
+                                            <a
+                                                href={client.url}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="mt-2 sm:mt-4 text-xs sm:text-sm text-white hover:text-teal-200 transition duration-300 text-center line-clamp-2"
+                                            >
+                                                {client.fullName}
+                                            </a>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                            <div className="flex flex-col justify-center items-center">
-                                <img width="150" src={client2} alt="Bureau of Police Research & Development" />
-                                <a href="https://eustad.in/" target="_blank" rel="noreferrer" className="mt-2 text-sm text-white hover:text-teal-200 transition duration-300">Bureau of Police Research & Development, MHA</a>
-                            </div>
-                            <div className="flex flex-col justify-center items-center">
-                                <img width="150" src={client3} alt="Centre for Development of Advanced Computing" />
-                                <a href="https://cakes.cdac.in/MeghSikshak/" target="_blank" rel="noreferrer" className="mt-2 text-sm text-white hover:text-teal-200 transition duration-300">Centre for Development of Advanced Computing, MeitY</a>
-                            </div>
-                            <div className="flex flex-col justify-center items-center">
-                                <img width="150" src={client4} alt="Chariot Program" />
-                                <a href="https://meghsikshak.in/chariot/" target="_blank" rel="noreferrer" className="mt-2 text-sm text-white hover:text-teal-200 transition duration-300">Chariot Program</a>
-                            </div>
-                        </div>
-                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 pt-16">
-                            <a href="#clientSlide2" className="btn btn-circle text-white bg-indigo-500 hover:bg-indigo-600">❮</a>
-                            <a href="#clientSlide3" className="btn btn-circle text-white bg-indigo-500 hover:bg-indigo-600">❯</a>
-                        </div>
+                        ))}
                     </div>
-                    <div id="clientSlide2" className="carousel-item relative w-full">
-                        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:gap-12 w-full px-6">
-                            <div className="flex flex-col justify-center items-center">
-                                <img width="150" src={client5} alt="Centre for Materials for Electronics Technology" />
-                                <a href="https://kaushalvikas.coeonewaste.com/MeghSikshak/" target="_blank" rel="noreferrer" className="mt-2 text-sm text-white hover:text-teal-200 transition duration-300">Centre for Materials for Electronics Technology, GoI</a>
-                            </div>
-                            <div className="flex flex-col justify-center items-center">
-                                <img width="150" src={client6} alt="National Defence University" />
-                                <a href="https://mfa.gov.mn/en/" target="_blank" rel="noreferrer" className="mt-2 text-sm text-white hover:text-teal-200 transition duration-300">National Defence University, Ulaanbaatar Mongolia</a>
-                            </div>
-                            <div className="flex flex-col justify-center items-center">
-                                <img width="150" src={client7} alt="Department of Post" />
-                                <a href="https://dakshiksha.gov.in/DakShiksha/" target="_blank" rel="noreferrer" className="mt-2 text-sm text-white hover:text-teal-200 transition duration-300">Department of Post, India</a>
-                            </div>
-                            <div className="flex flex-col justify-center items-center">
-                                <img width="150" src={client8} alt="Kerala Police Academy" />
-                                <a href="https://lms.keralapoliceacademy.gov.in/DKMS/" target="_blank" rel="noreferrer" className="mt-2 text-sm text-white hover:text-teal-200 transition duration-300">Kerala Police Academy, Thrissur</a>
-                            </div>
-                        </div>
-                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 pt-16">
-                            <a href="#clientSlide1" className="btn btn-circle text-white bg-indigo-500 hover:bg-indigo-600">❮</a>
-                            <a href="#clientSlide3" className="btn btn-circle text-white bg-indigo-500 hover:bg-indigo-600">❯</a>
-                        </div>
-                    </div>
-                    <div id="clientSlide3" className="carousel-item relative w-full">
-                        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:gap-12 w-full px-6">
-                            <div className="flex flex-col justify-center items-center">
-                                <img width="150" src={client9} alt="MPA" />
-                                <a href="https://www.mpa.com" target="_blank" rel="noreferrer" className="mt-2 text-sm text-white hover:text-teal-200 transition duration-300">MPA</a>
-                            </div>
-                            <div className="flex flex-col justify-center items-center">
-                                <img width="150" src={client10} alt="NSFU" />
-                                <a href="https://www.nsfu.com" target="_blank" rel="noreferrer" className="mt-2 text-sm text-white hover:text-teal-200 transition duration-300">NSFU</a>
-                            </div>
-                            <div className="flex flex-col justify-center items-center">
-                                <img width="150" src={client11} alt="PPA" />
-                                <a href="https://www.ppa.com" target="_blank" rel="noreferrer" className="mt-2 text-sm text-white hover:text-teal-200 transition duration-300">PPA</a>
-                            </div>
-                        </div>
-                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 pt-16">
-                            <a href="#clientSlide2" className="btn btn-circle text-white bg-indigo-500 hover:bg-indigo-600">❮</a>
-                            <a href="#clientSlide1" className="btn btn-circle text-white bg-indigo-500 hover:bg-indigo-600">❯</a>
-                        </div>
-                    </div>
+
+                    <button
+                        onClick={prevSlide}
+                        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 
+                        bg-white/10 hover:bg-white/20 text-white rounded-full 
+                        p-1 sm:p-2 backdrop-blur-sm transition-all duration-300 
+                        hidden sm:block"
+                    >
+                        <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
+                    </button>
+                    <button
+                        onClick={nextSlide}
+                        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 
+                        bg-white/10 hover:bg-white/20 text-white rounded-full 
+                        p-1 sm:p-2 backdrop-blur-sm transition-all duration-300 
+                        hidden sm:block"
+                    >
+                        <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
+                    </button>
                 </div>
             </div>
         </div>

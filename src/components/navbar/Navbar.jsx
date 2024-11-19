@@ -189,7 +189,7 @@ const Navbar = ({ theme, setTheme }) => {
                             </a>
                         </li> */}
                         <li>
-                            <a href="tel:+919177669936" className="text-white hover:text-indigo-400">
+                            <a href="tel:+9182561076" className="text-white hover:text-indigo-400">
                                 Call Now
                             </a>
                         </li>

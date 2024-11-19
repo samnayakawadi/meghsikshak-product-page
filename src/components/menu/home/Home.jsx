@@ -15,14 +15,14 @@ const Home = () => {
             <div id="statistics" className=" bg-base-200">
                 <Stats />
             </div>
-            <div className="px-10 md:px-32">
-                <div className="pt-20" id="organizations">
+            <div className="px-2 md:px-32">
+                <div className="pt-10" id="organizations">
                     <Organizations />
                 </div>
-                <div className="pt-20" id="highlights">
+                <div className="pt-10" id="highlights">
                     <Features />
                 </div>
-                <div className="pt-20" id="features">
+                <div className="pt-10" id="features">
                     <AdvancedFeatures />
                 </div>
             </div>
