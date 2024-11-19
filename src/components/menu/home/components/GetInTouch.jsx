@@ -1,25 +1,36 @@
-import getInTouchImage from "./images/getInTouch/contact-trans.png"
-import GetInTouchModal from "./modal/GetInTouchModal"
+import getInTouchImage from "./images/getInTouch/contact-trans.png";
+import GetInTouchModal from "./modal/GetInTouchModal";
+
 const GetInTouch = () => {
     return (
-        <div className="px-0 sm:px-1 md:px-5 lg:px-20 xl:px-40 2xl:px-80">
+        <div className="px-0 sm:px-1 md:px-5 lg:px-20 xl:px-40 2xl:px-80 bg-gradient-to-r from-purple-600 via-blue-500 to-teal-500 py-16">
             <GetInTouchModal />
-            <div className="card bg-base-100 shadow-md">
+            <div className=" rounded-3xl overflow-hidden transition-transform transform">
                 <div className="flex flex-row flex-wrap md:flex-nowrap justify-center items-center">
-                    <div className="basis-full md:basis-7/12 p-10 md:pl-10">
-                        <h1 className="text-4xl font-bold">Serving Our Customers</h1>
-                        <p className="pt-6">We want to give consumers a first-rate onboarding experience so they can get the most out of MeghSikshak. Customer service is something we work to include in every aspect of our business at MeghSikshak.</p>
-                        <label htmlFor="getInTouchModal" className="btn btn-primary mt-6 normal-case">Get in Touch</label>
-                        {/* <a href="mailto:meghsikshak@cdac.in" alt="">
-                        </a> */}
+                    <div className="basis-full md:basis-7/12 p-10 md:pl-1 text-white">
+                        <h1 className="text-5xl font-extrabold leading-tight">Serving Our Customers</h1>
+                        <p className="pt-6 text-lg font-light opacity-90">
+                            We want to give consumers a first-rate onboarding experience so they can get the most out of MeghSikshak.
+                            Customer service is something we work to include in every aspect of our business at MeghSikshak.
+                        </p>
+                        <label
+                            htmlFor="getInTouchModal"
+                            className="btn bg-gradient-to-r from-indigo-600 to-purple-600 text-white mt-6 normal-case px-8 text-lg rounded-full transition-transform transform hover:scale-110"
+                        >
+                            Get in Touch
+                        </label>
                     </div>
                     <div className="basis-full md:basis-5/12 flex flex-row justify-center items-center p-10">
-                        <img className="" src={getInTouchImage} alt="" />
+                        <img
+                            className="rounded-xltransform transition-all"
+                            src={getInTouchImage}
+                            alt="Get In Touch"
+                        />
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default GetInTouch
+export default GetInTouch;

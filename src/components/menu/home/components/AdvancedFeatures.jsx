@@ -17,13 +17,13 @@ const AdvancedFeatures = () => {
     return (
         <div>
             <div>
-                <div className="px-0 md:px-44">
+                <div className="py-10 md:px-44">
                     <div className="text-3xl text-center">Why choose <span className="font-bold">MeghSikshak?</span></div>
                     <div className="pt-2 text-center">
                         A flexible, one-stop solution for all types of online learning
                     </div>
                 </div>
-                <div>
+                <div className="flex flex-col gap-6">
                     <Component1 />
                     <Component2 />
                     {/* <Component3 /> */}

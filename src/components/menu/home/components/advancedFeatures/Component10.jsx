@@ -2,32 +2,26 @@ import assessmentAuthoring from "../images/advancedFeatures/assessmentAuthoring.
 
 const Component10 = () => {
     return (
-        <div className="px-5 md:px-20 py-10 bg-base-200">
-            <div className="flex justify-center items-center gap-4 flex-row-reverse flex-wrap md:flex-nowrap">
-                <div className="basis-full md:basis-6/12">
-                    <h2 className="text-3xl font-bold">Quiz Creation</h2>
-                    {/* <p className="pt-4">The assessment module has been separately built by us. It is built into our LMS by default. This module has the same roles as LMS. The quiz can be created by the instructor, who can then add the questions, assign the quiz to users retrieved from the LMS, and allow users to take the test. There are numerous features offered.</p> */}
-                    <p className="pt-4">The built-in assessment module enables Course Instructors to create Quizzes for meaningful assessment of learners’ learning levels. There are numerous features offered.</p>
-                    <ul className="flex flex-col gap-2 pt-4">
-                        {/* <li className="flex flex-row gap-4 justify-start items-center"><i className="fa-solid fa-circle-check" /> Question Editor</li>
-                        <li className="flex flex-row gap-4 justify-start items-center"><i className="fa-solid fa-circle-check" /> Quiz & Section Editor</li>
-                        <li className="flex flex-row gap-4 justify-start items-center"><i className="fa-solid fa-circle-check" /> Assign Editor</li>
-                        <li className="flex flex-row gap-4 justify-start items-center"><i className="fa-solid fa-circle-check" /> Import Editor</li> */}
-                        <li className="flex flex-row gap-4 justify-start items-center"><i className="fa-solid fa-circle-check" /> User friendly Question Editor</li>
-                        <li className="flex flex-row gap-4 justify-start items-center"><i className="fa-solid fa-circle-check" /> Structured Quiz Organiser</li>
-                        <li className="flex flex-row gap-4 justify-start items-center"><i className="fa-solid fa-circle-check" /> Learner and context specific Quiz Assigner</li>
-                        {/* <li className="flex flex-row gap-4 justify-start items-center"><i className="fa-solid fa-circle-check" /> Quiz & Section Editor</li>
-                        <li className="flex flex-row gap-4 justify-start items-center"><i className="fa-solid fa-circle-check" /> Assign Editor</li>
-                        <li className="flex flex-row gap-4 justify-start items-center"><i className="fa-solid fa-circle-check" /> Import Editor</li> */}
+        <div className="px-5 md:px-20 py-14 bg-gradient-to-r from-teal-500 via-cyan-600 to-blue-700 rounded-lg shadow-2xl">
+            <div className="flex justify-center items-center gap-4 flex-row flex-wrap md:flex-nowrap">
+                <div className="basis-full md:basis-6/12 text-white">
+                    <h2 className="text-4xl font-bold mb-6 leading-snug">Quiz Creation</h2>
+                    <p className="text-lg font-light mb-6">The built-in assessment module enables Course Instructors to create Quizzes for meaningful assessment of learners’ learning levels. There are numerous features offered.</p>
+                    <ul className="flex flex-col gap-4">
+                        <li className="flex flex-row gap-4 justify-start items-center">
+                            <i className="fa-solid fa-circle-check text-cyan-200" /> User-friendly Question Editor
+                        </li>
+                        <li className="flex flex-row gap-4 justify-start items-center">
+                            <i className="fa-solid fa-circle-check text-cyan-200" /> Structured Quiz Organizer
+                        </li>
+                        <li className="flex flex-row gap-4 justify-start items-center">
+                            <i className="fa-solid fa-circle-check text-cyan-200" /> Learner and Context-Specific Quiz Assigner
+                        </li>
                     </ul>
-                    {/* <div className="flex flex-row justify-start gap-4 pt-4 flex-wrap md:flex-nowrap">
-                        <button className="btn btn-primary">See All Features</button>
-                        <button className="btn btn-primary">Watch Demo</button>
-                    </div> */}
                 </div>
                 <div className="basis-full md:basis-6/12 pt-10 md:pt-0">
-                    <div className="flex flex-row justify-center items-center md:p-5">
-                        <img src={assessmentAuthoring} alt="" />
+                    <div className="flex flex-row justify-center items-center md:p-10 bg-white rounded-lg shadow-xl">
+                        <img src={assessmentAuthoring} alt="Assessment Authoring" className="rounded-lg shadow-2xl" />
                     </div>
                 </div>
             </div>

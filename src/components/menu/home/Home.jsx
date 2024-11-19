@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div>
             <Hero />
-            <div id="statistics" className="pt-14 bg-base-200">
+            <div id="statistics" className=" bg-base-200">
                 <Stats />
             </div>
             <div className="px-10 md:px-32">
@@ -29,10 +29,10 @@ const Home = () => {
             <div className="pt-20" id="clients">
                 <TrustedBy />
             </div>
-            <div className="mt-14 mb-16">
+            <div className="">
                 <CustomerCarousel />
             </div>
-            <div className="px-10 sm:px-10 md:px-20 lg:px-32 pt-16 md:pt-0" id="contact">
+            <div className="" id="contact">
                 <GetInTouch />
             </div>
         </div>
