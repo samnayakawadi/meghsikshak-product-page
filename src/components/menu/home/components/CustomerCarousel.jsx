@@ -64,7 +64,7 @@ const CustomerCarousel = () => {
     };
 
     return (
-        <div id="testimonials" className="bg-gradient-to-r from-blue-500 to-teal-500 py-12 sm:py-16 overflow-x-hidden">
+        <div id="testimonials" className="bg-gradient-to-r from-blue-500 to-teal-500 py-12 md:py-8 overflow-x-hidden">
             <div className="hero px-5 md:px-40">
                 <div className="hero-content text-center text-white">
                     <div className="max-w-none">

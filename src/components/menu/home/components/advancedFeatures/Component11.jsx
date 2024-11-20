@@ -23,8 +23,8 @@ const Component11 = () => {
                     </ul>
                 </div>
                 <div className="basis-full md:basis-6/12 pt-10 md:pt-0">
-                    <div className="flex flex-row justify-center items-center md:p-8 bg-white rounded-lg shadow-2xl">
-                        <img src={assessmentDelivery} alt="Assessment Delivery" className="rounded-lg shadow-xl hover:scale-105 transition-all duration-300" />
+                    <div className="flex flex-row justify-center items-center md:p-8">
+                        <img src={assessmentDelivery} alt="Assessment Delivery" />
                     </div>
                 </div>
             </div>

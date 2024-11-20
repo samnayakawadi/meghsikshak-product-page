@@ -1,10 +1,10 @@
-import logo from "./images/megh-logo.png";
+import logo from "./images/megh-logo-v2.png";
 
 const Navbar = ({ theme, setTheme }) => {
     return (
         <div>
             {/* Navbar with gradient background */}
-            <div className="navbar bg-gradient-to-r from-indigo-600 to-purple-600 fixed w-full z-20 top-0 left-0 shadow-lg">
+            <div className="navbar bg-gradient-to-r from-pink-500 to-pink-400 fixed w-full z-20 top-0 left-0 shadow-lg">
                 <div className="navbar-start">
                     {/* Mobile Menu */}
                     <div className="dropdown">
@@ -29,47 +29,47 @@ const Navbar = ({ theme, setTheme }) => {
                             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
                         >
                             <li>
-                                <a href="#home" className="hover:text-indigo-400">
+                                <a href="#home">
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a href="#statistics" className="hover:text-indigo-400">
+                                <a href="#statistics" className="">
                                     Utility Stats
                                 </a>
                             </li>
                             <li>
-                                <a href="#organizations" className="hover:text-indigo-400">
+                                <a href="#organizations" className="">
                                     Target Users
                                 </a>
                             </li>
                             <li>
-                                <a href="#highlights" className="hover:text-indigo-400">
+                                <a href="#highlights" className="">
                                     Overview
                                 </a>
                             </li>
                             <li>
-                                <a href="#features" className="hover:text-indigo-400">
+                                <a href="#features" className="">
                                     Features
                                 </a>
                             </li>
                             <li>
-                                <a href="#clients" className="hover:text-indigo-400">
+                                <a href="#clients" className="">
                                     Clients
                                 </a>
                             </li>
                             <li>
-                                <a href="#testimonials" className="hover:text-indigo-400">
+                                <a href="#testimonials" className="">
                                     Testimonials
                                 </a>
                             </li>
                             <li>
-                                <a href="#contact" className="hover:text-indigo-400">
+                                <a href="#contact" className="">
                                     Get in Touch
                                 </a>
                             </li>
                             <li>
-                                <a className="hover:text-indigo-400">
+                                <a className="">
                                     Theme
                                     <svg
                                         className="fill-current text-white"
@@ -109,58 +109,58 @@ const Navbar = ({ theme, setTheme }) => {
                                 </ul>
                             </li>
                             <li>
-                                <a href="tel:+919177669936" className="hover:text-indigo-400">
-                                    Call Now
+                                <a href="https://wa.link/kjwgg3" target="_blank" className="" rel="noreferrer">
+                                    Connect Now
                                 </a>
                             </li>
                         </ul>
                     </div>
                     {/* Logo */}
                     <a className="ml-5 btn btn-ghost normal-case text-xl text-white">
-                        {/* <img width="180" className="max-w-xs" src={logo} alt="Logo" /> */}
-                        MeghSikshak
+                        <img width="180" className="max-w-xs" src={logo} alt="Logo" />
+                        {/* MeghSikshak */}
                     </a>
                 </div>
                 {/* Desktop Menu */}
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-6">
                         <li>
-                            <a href="#home" className="text-white hover:text-indigo-400">
+                            <a href="#home" className="text-white">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="#statistics" className="text-white hover:text-indigo-400">
+                            <a href="#statistics" className="text-white ">
                                 Utility Stats
                             </a>
                         </li>
                         <li>
-                            <a href="#organizations" className="text-white hover:text-indigo-400">
+                            <a href="#organizations" className="text-white ">
                                 Target Users
                             </a>
                         </li>
                         <li>
-                            <a href="#highlights" className="text-white hover:text-indigo-400">
+                            <a href="#highlights" className="text-white ">
                                 Overview
                             </a>
                         </li>
                         <li>
-                            <a href="#features" className="text-white hover:text-indigo-400">
+                            <a href="#features" className="text-white ">
                                 Features
                             </a>
                         </li>
                         <li>
-                            <a href="#clients" className="text-white hover:text-indigo-400">
+                            <a href="#clients" className="text-white ">
                                 Clients
                             </a>
                         </li>
                         <li>
-                            <a href="#testimonials" className="text-white hover:text-indigo-400">
+                            <a href="#testimonials" className="text-white ">
                                 Testimonials
                             </a>
                         </li>
                         <li>
-                            <a href="#contact" className="text-white hover:text-indigo-400">
+                            <a href="#contact" className="text-white ">
                                 Get in Touch
                             </a>
                         </li>
@@ -171,7 +171,7 @@ const Navbar = ({ theme, setTheme }) => {
                     <ul className="menu menu-horizontal px-1">
                         {/* <li>
                             <a
-                                className="text-white hover:text-indigo-400"
+                                className="text-white "
                                 onClick={() => {
                                     setTheme(theme === "lofi" ? "business" : "lofi");
                                 }}
@@ -189,8 +189,8 @@ const Navbar = ({ theme, setTheme }) => {
                             </a>
                         </li> */}
                         <li>
-                            <a href="tel:+9182561076" className="text-white hover:text-indigo-400">
-                                Call Now
+                            <a href="https://wa.link/kjwgg3" target="_blank" className="text-white " rel="noreferrer">
+                                Connect Now
                             </a>
                         </li>
                     </ul>

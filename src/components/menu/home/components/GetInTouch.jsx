@@ -3,7 +3,7 @@ import GetInTouchModal from "./modal/GetInTouchModal";
 
 const GetInTouch = () => {
     return (
-        <div className="px-0 sm:px-1 md:px-5 lg:px-20 xl:px-40 2xl:px-80 bg-gradient-to-r from-purple-600 via-blue-500 to-teal-500 py-16">
+        <div className="px-0 sm:px-1 md:px-5 lg:px-20 xl:px-40 2xl:px-80 bg-gradient-to-r from-purple-600 via-blue-500 to-teal-500 ">
             <GetInTouchModal />
             <div className=" rounded-3xl overflow-hidden transition-transform transform">
                 <div className="flex flex-row flex-wrap md:flex-nowrap justify-center items-center">
@@ -22,7 +22,7 @@ const GetInTouch = () => {
                     </div>
                     <div className="basis-full md:basis-5/12 flex flex-row justify-center items-center p-10">
                         <img
-                            className="rounded-xltransform transition-all"
+                            className="rounded-xltransform transition-all w-80"
                             src={getInTouchImage}
                             alt="Get In Touch"
                         />

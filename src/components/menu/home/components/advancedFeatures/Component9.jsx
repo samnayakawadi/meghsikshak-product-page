@@ -20,8 +20,8 @@ const Component9 = () => {
                     </ul>
                 </div>
                 <div className="basis-full md:basis-6/12 pt-10 md:pt-0">
-                    <div className="flex flex-row justify-center items-center md:p-10 bg-white rounded-lg shadow-2xl">
-                        <img src={assignment} alt="Assignment Features" className="rounded-lg shadow-xl"/>
+                    <div className="flex flex-row justify-center items-center md:p-10">
+                        <img src={assignment} alt="Assignment Features" />
                     </div>
                 </div>
             </div>
