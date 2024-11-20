@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <div id="home">
             <div className="pt-24 pb-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 px-10 md:px-32 shadow-xl">
-                <div className="flex flex-row flex-wrap justify-center items-center">
+                <div className="flex flex-row flex-wrap max-md:flex-col-reverse justify-center items-center">
                     <div className="basis-full md:basis-7/12">
                         <div className="p-0 md:px-20 text-white">
                             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
@@ -15,19 +15,21 @@ const Hero = () => {
                             <p className="pt-2 pb-6 text-lg md:text-xl">Designed for government institutions and large corporations.</p>
                             <div className="flex flex-start gap-3 flex-wrap">
                                 <a href="mailto:meghsikshak@cdac.in">
-                                    <label htmlFor="getInTouchModal" className="btn btn-lg bg-gradient-to-r from-teal-400 to-blue-400 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 normal-case">
-                                        <i className="fas fa-envelope mr-2"></i> Get In Touch
+                                    <label htmlFor="getInTouchModal" className="btn flex gap-3 btn-lg bg-gradient-to-r from-teal-400 to-blue-400 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 normal-case">
+                                        <i className="fas fa-envelope mr-2"></i>
+                                        <span>Get In Touch</span>
                                     </label>
                                 </a>
                                 <a href="/downloads/meghsikshak-brochure.pdf" target="_blank">
-                                    <label className="btn btn-lg bg-gradient-to-r from-purple-400 to-pink-400 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 normal-case">
-                                        <i className="fas fa-download mr-2"></i> Download Brochure {"(PDF)"}
+                                    <label className="btn flex gap-3 btn-lg bg-gradient-to-r from-purple-400 to-pink-400 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 normal-case">
+                                        <i className="fas fa-download"></i>
+                                        <span className="max-lg:text-sm">Download Brochure {"(PDF)"}</span>
                                     </label>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div className="basis-full md:basis-5/12 pt-20 md:py-0 flex flex-row justify-center flex-wrap">
+                    <div className="basis-full md:basis-5/12 pt-10 md:py-0 flex flex-row justify-center flex-wrap">
                         <img alt="MeghSikshak" src={meghsikshak} className="max-w-full rounded-xl transform hover:scale-105 transition-transform duration-300" />
                     </div>
                 </div>

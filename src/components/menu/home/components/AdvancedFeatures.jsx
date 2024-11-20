@@ -181,8 +181,8 @@ const AdvancedFeatures = () => {
                         <div className="absolute top-10 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 delay-1000"></div>
 
                         {/* Main content */}
-                        <div className="relative z-10">
-                            <div className="text-5xl py-3 text-center font-light text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-purple-200 to-blue-200">
+                        <div className="relative z-10 px-5">
+                            <div className="text-5xl max-md:text-3xl py-3 text-center font-light text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-purple-200 to-blue-200">
                                 Why choose <span className="font-bold">MeghSikshak?</span>
                             </div>
 
