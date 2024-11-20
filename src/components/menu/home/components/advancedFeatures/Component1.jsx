@@ -4,7 +4,7 @@ const Component1 = () => {
     return (
         <div className="px-5 md:px-20 py-14 bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 rounded-lg shadow-xl">
             <div className="flex flex-row flex-wrap md:flex-nowrap justify-center items-center gap-4">
-                <div className="basis-full md:basis-6/12">
+                <div className="basis-full">
                     <h2 className="text-4xl font-bold text-white leading-snug mb-4">Secure Registration & Login</h2>
                     <p className="text-white text-lg font-light">Well-designed secure registration and login ensure swift onboarding of users with analytics to learn more about them.</p>
                     <ul className="flex flex-col gap-2 pt-6">
@@ -22,11 +22,11 @@ const Component1 = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="basis-full md:basis-6/12 pt-10 md:pt-0">
+                {/* <div className="basis-full md:basis-6/12 pt-10 md:pt-0">
                     <div className="flex flex-row justify-center items-center md:p-10">
                         <img src={registration} alt="Secure Registration and Login" className="" />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

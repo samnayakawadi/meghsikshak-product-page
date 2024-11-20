@@ -4,7 +4,7 @@ const Component11 = () => {
     return (
         <div className="px-5 md:px-20 py-14 bg-gradient-to-r from-purple-600 via-pink-500 to-red-400 rounded-lg shadow-xl">
             <div className="flex justify-center items-center gap-6 flex-row flex-wrap md:flex-nowrap">
-                <div className="basis-full md:basis-6/12 text-white">
+                <div className="basis-full text-white">
                     <h2 className="text-4xl font-bold mb-6 leading-snug">Quiz Delivery</h2>
                     <p className="text-lg font-light mb-6">An elaborate quiz delivery module streamlines the assessment process to offer a context-aware, learner-friendly, secure, and transparent evaluation.</p>
                     <ul className="flex flex-col gap-4">
@@ -22,11 +22,11 @@ const Component11 = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="basis-full md:basis-6/12 pt-10 md:pt-0">
+                {/* <div className="basis-full md:basis-6/12 pt-10 md:pt-0">
                     <div className="flex flex-row justify-center items-center md:p-8">
                         <img src={assessmentDelivery} alt="Assessment Delivery" />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -79,7 +79,7 @@ const CustomerCarousel = () => {
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
             >
-                <div className="relative w-full h-[500px] sm:h-[450px] md:h-[400px]">
+                <div className="relative w-full h-[500px] sm:h-[450px] md:h-[300px]">
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
@@ -91,7 +91,7 @@ const CustomerCarousel = () => {
                             <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16 h-full">
                                 <div className="w-full md:w-3/12 flex justify-center px-4 md:px-0">
                                     <img
-                                        className="rounded-3xl max-w-xs w-full shadow-xl object-cover"
+                                        className="rounded-3xl max-w-xs w-56 shadow-xl object-cover"
                                         src={testimonial.img}
                                         alt={testimonial.name}
                                     />

@@ -127,7 +127,7 @@ const TrustedBy = () => {
     };
 
     return (
-        <div className="bg-gradient-to-r from-indigo-600 to-blue-500 py-12 sm:py-16 md:py-20">
+        <div className="bg-gradient-to-r from-indigo-600 to-blue-500 py-12 sm:py-16 md:py-16">
             <div className="container mx-auto text-center text-white">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-4 sm:px-6 md:px-20">
                     Trusted By Prestigious Institutions
@@ -142,7 +142,7 @@ const TrustedBy = () => {
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <div className="relative w-full min-h-[400px] sm:min-h-[250px] md:min-h-[300px]">
+                    <div className="relative w-full min-h-[400px] sm:min-h-[250px] md:min-h-[250px]">
                         {clients.map((slide, slideIndex) => (
                             <div
                                 key={slideIndex}

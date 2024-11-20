@@ -4,7 +4,7 @@ const Component2 = () => {
     return (
         <div className="px-5 md:px-20 py-10 bg-gradient-to-r from-indigo-600 via-blue-500 to-teal-400 rounded-lg shadow-xl">
             <div className="flex justify-center items-center gap-10 flex-wrap md:flex-nowrap">
-                <div className="basis-full md:basis-6/12 text-white">
+                <div className="basis-full text-white">
                     <h2 className="text-4xl font-bold leading-snug mb-4">Multilingual Application</h2>
                     <p className="text-lg font-light mb-6">Truly multilingual with support to all constitutionally recognised Indian languages, besides English.</p>
                     <ul className="flex flex-col gap-2">
@@ -16,11 +16,11 @@ const Component2 = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="basis-full md:basis-6/12 pt-10 md:pt-0">
+                {/* <div className="basis-full md:basis-6/12 pt-10 md:pt-0">
                     <div className="flex flex-row justify-center items-center md:p-10">
                         <img src={multilingual} alt="Multilingual Application" />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
