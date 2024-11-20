@@ -157,7 +157,7 @@ const TrustedBy = () => {
                                             key={index}
                                             className="flex flex-col items-center justify-center w-full max-w-[200px] transform transition-transform duration-300 hover:scale-105"
                                         >
-                                            <div className="bg-white/10 rounded-lg p-4 sm:p-6 backdrop-blur-sm w-full flex justify-center items-center">
+                                            <div className="bg-white/80 rounded-lg p-4 sm:p-6 backdrop-blur-sm w-full flex justify-center items-center">
                                                 <img
                                                     src={client.img}
                                                     alt={client.name}

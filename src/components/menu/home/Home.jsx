@@ -15,7 +15,7 @@ const Home = () => {
             <div id="statistics" className=" bg-base-200">
                 <Stats />
             </div>
-            <div className="px-2 md:px-10">
+            <div className="px-3">
                 <div className="pt-5" id="organizations">
                     <Organizations />
                 </div>
@@ -29,9 +29,10 @@ const Home = () => {
             <div className="pt-5" id="clients">
                 <TrustedBy />
             </div>
-            <div className="">
+            {/* Do Not Remove This */}
+            {/* <div className="">
                 <CustomerCarousel />
-            </div>
+            </div> */}
             <div className="" id="contact">
                 <GetInTouch />
             </div>

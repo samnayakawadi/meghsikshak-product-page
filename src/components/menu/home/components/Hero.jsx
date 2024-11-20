@@ -15,7 +15,14 @@ const Hero = () => {
                             <p className="pt-2 pb-6 text-lg md:text-xl">Designed for government institutions and large corporations.</p>
                             <div className="flex flex-start gap-3 flex-wrap">
                                 <a href="mailto:meghsikshak@cdac.in">
-                                    <label htmlFor="getInTouchModal" className="btn btn-lg bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 normal-case">Get In Touch</label>
+                                    <label htmlFor="getInTouchModal" className="btn btn-lg bg-gradient-to-r from-teal-400 to-blue-400 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 normal-case">
+                                        <i className="fas fa-envelope mr-2"></i> Get In Touch
+                                    </label>
+                                </a>
+                                <a href="/downloads/meghsikshak-brochure.pdf" target="_blank">
+                                    <label className="btn btn-lg bg-gradient-to-r from-purple-400 to-pink-400 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 normal-case">
+                                        <i className="fas fa-download mr-2"></i> Download Brochure {"(PDF)"}
+                                    </label>
                                 </a>
                             </div>
                         </div>

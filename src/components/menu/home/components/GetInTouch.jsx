@@ -16,9 +16,9 @@ const GetInTouch = () => {
                         <div className="text-center">
                             <label
                                 htmlFor="getInTouchModal"
-                                className="btn bg-gradient-to-r from-indigo-600 to-purple-600 text-white mt-6 normal-case px-8 text-lg rounded-full transition-transform transform hover:scale-110"
+                                className="btn bg-gradient-to-r from-indigo-600 to-purple-600 text-white mt-6 normal-case px-8 text-lg rounded-full transition-all transform focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                             >
-                                Get in Touch
+                                <i className="fas fa-envelope mr-2"></i> Get in Touch
                             </label>
                         </div>
                     </div>

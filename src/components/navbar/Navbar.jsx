@@ -1,14 +1,28 @@
+import React, { useState } from "react";
 import logo from "./images/megh-logo-v2.png";
 
-const Navbar = ({ theme, setTheme }) => {
+const Navbar = () => {
+    // Local state for theme and menu items
+    const [theme, setTheme] = useState("lofi"); // Default theme
+    const menuItems = [
+        { name: "Home", href: "#home" },
+        // { name: "Utility Stats", href: "#statistics" },
+        { name: "Target Sectors", href: "#organizations" },
+        { name: "Platform Features", href: "#highlights" },
+        { name: "Why Choose Us?", href: "#features" },
+        { name: "Clients", href: "#clients" },
+        // { name: "Testimonials", href: "#testimonials" },
+        { name: "Get in Touch", href: "#contact" },
+    ];
+
     return (
         <div>
             {/* Navbar with gradient background */}
-            <div className="navbar bg-gradient-to-r from-pink-500 to-pink-400 fixed w-full z-20 top-0 left-0 shadow-lg">
+            <div className="navbar bg-gradient-to-r from-gray-50 to-gray-50 md:to-gray-50 text-black fixed w-full z-20 top-0 left-0 shadow-lg">
                 <div className="navbar-start">
                     {/* Mobile Menu */}
                     <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden text-white">
+                        <label tabIndex={0} className="btn btn-ghost lg:hidden text-black">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-5 w-5"
@@ -28,156 +42,53 @@ const Navbar = ({ theme, setTheme }) => {
                             tabIndex={0}
                             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
                         >
-                            <li>
-                                <a href="#home">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#statistics" className="">
-                                    Utility Stats
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#organizations" className="">
-                                    Target Users
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#highlights" className="">
-                                    Overview
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#features" className="">
-                                    Features
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#clients" className="">
-                                    Clients
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#testimonials" className="">
-                                    Testimonials
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contact" className="">
-                                    Get in Touch
-                                </a>
-                            </li>
-                            <li>
-                                <a className="">
-                                    Theme
-                                    <svg
-                                        className="fill-current text-white"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                                    </svg>
-                                </a>
-                                <ul className="p-2 bg-zinc-600 text-white">
-                                    <li
-                                        onClick={() => {
-                                            setTheme("lofi");
-                                        }}
-                                    >
-                                        <a>
-                                            Light{" "}
-                                            {theme === "lofi" && (
-                                                <i className="fa-solid fa-circle-check text-indigo-400" />
-                                            )}
-                                        </a>
-                                    </li>
-                                    <li
-                                        onClick={() => {
-                                            setTheme("business");
-                                        }}
-                                    >
-                                        <a>
-                                            Dark{" "}
-                                            {theme === "business" && (
-                                                <i className="fa-solid fa-circle-check text-indigo-400" />
-                                            )}
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="https://wa.link/kjwgg3" target="_blank" className="" rel="noreferrer">
-                                    Connect Now
-                                </a>
-                            </li>
+                            {menuItems.map((item, index) => (
+                                <li key={index}>
+                                    <a href={item.href}>{item.name}</a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     {/* Logo */}
-                    <a className="ml-5 btn btn-ghost normal-case text-xl text-white">
+                    <span className="hidden lg:flex">
+                        <a href="#" className="md:ml-5 btn btn-ghost normal-case text-xl text-black">
+                            <img width="180" className="max-w-xs" src={logo} alt="Logo" />
+                        </a>
+                    </span>
+
+                </div>
+
+                <div className="navbar-center flex lg:hidden">
+                    <a href="#" className="md:ml-5 btn btn-ghost normal-case text-xl text-black">
                         <img width="180" className="max-w-xs" src={logo} alt="Logo" />
-                        {/* MeghSikshak */}
                     </a>
                 </div>
+
                 {/* Desktop Menu */}
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 space-x-6">
-                        <li>
-                            <a href="#home" className="text-white">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#statistics" className="text-white ">
-                                Utility Stats
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#organizations" className="text-white ">
-                                Target Users
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#highlights" className="text-white ">
-                                Overview
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#features" className="text-white ">
-                                Features
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#clients" className="text-white ">
-                                Clients
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#testimonials" className="text-white ">
-                                Testimonials
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact" className="text-white ">
-                                Get in Touch
-                            </a>
-                        </li>
+                    <ul className="flex px-1 space-x-6 hover:cursor-pointer">
+                        {menuItems.map((item, index) => (
+                            <li key={index} className=" ">
+                                <a href={item.href} className="p-3 hover:bg-gray-500 hover:text-white">
+                                    {item.name}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
+
                 {/* Theme and Call Actions on the Right */}
                 <div className="navbar-end gap-3">
                     <ul className="menu menu-horizontal px-1">
                         {/* <li>
                             <a
-                                className="text-white "
+                                className="text-black"
                                 onClick={() => {
                                     setTheme(theme === "lofi" ? "business" : "lofi");
                                 }}
                             >
                                 <svg
-                                    className="fill-current text-white"
+                                    className="fill-current text-black"
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="20"
                                     height="20"
@@ -189,8 +100,8 @@ const Navbar = ({ theme, setTheme }) => {
                             </a>
                         </li> */}
                         <li>
-                            <a href="https://wa.link/kjwgg3" target="_blank" className="text-white " rel="noreferrer">
-                                Connect Now
+                            <a href="https://wa.link/kjwgg3" target="_blank" className="text-black md:mr-5" rel="noreferrer">
+                                <i className="fa-brands fa-whatsapp scale-150 text-green-500"></i>
                             </a>
                         </li>
                     </ul>

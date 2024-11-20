@@ -7,12 +7,12 @@ import secure from "./images/highlights/secure.png";
 
 const Features = () => {
     return (
-        <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800 py-8 sm:py-10">
+        <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 darkR:from-indigo-800 darkR:via-purple-800 darkR:to-pink-800 py-8 sm:py-10">
             <div className="flex flex-col justify-center items-center gap-4 px-4 sm:px-8 md:px-20 pb-1">
                 <div className="text-3xl sm:text-4xl text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-600">
                     <span className="font-bold">Product Overview</span>
                 </div>
-                <div className="pt-2 text-center text-sm sm:text-lg text-gray-700 dark:text-gray-300">
+                <div className="pt-2 text-center text-sm sm:text-lg text-gray-700 darkR:text-gray-300">
                     Offers a balanced service offering of user engagement, convenience, scalability, and security
                 </div>
             </div>
@@ -50,15 +50,15 @@ const Features = () => {
                             description: "Compliant with major standards such as QTI for assessment and SCORM for content distribution."
                         }
                     ].map((feature, index) => (
-                        <div key={index} className="card bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-700 dark:to-purple-700 transition-shadow duration-300 ease-in-out rounded-lg overflow-hidden shadow-md p-4">
+                        <div key={index} className="card bg-gradient-to-r from-indigo-100 to-purple-100 darkR:from-indigo-700 darkR:to-purple-700 transition-shadow duration-300 ease-in-out rounded-lg overflow-hidden shadow-md p-4">
                             <div className="card-body gap-4 py-4">
                                 <div className="flex flex-row justify-start items-center gap-3 sm:gap-4">
                                     <img width={40} src={feature.image} alt="" />
-                                    <h2 className="card-title text-lg sm:text-xl font-semibold text-gray-800 dark:text-white">
+                                    <h2 className="card-title text-lg sm:text-xl font-semibold text-gray-800 darkR:text-white">
                                         {feature.title}
                                     </h2>
                                 </div>
-                                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                                <p className="text-sm sm:text-base text-gray-600 darkR:text-gray-300">
                                     {feature.description}
                                 </p>
                             </div>
