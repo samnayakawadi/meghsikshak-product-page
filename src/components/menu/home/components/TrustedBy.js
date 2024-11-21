@@ -9,6 +9,8 @@ import client8 from "./images/clients/kepa.png";
 import client9 from "./images/clients/mpa.png";
 import client10 from "./images/clients/nsfu.png";
 import client11 from "./images/clients/ppa.png";
+import client12 from "./images/clients/cme.png";
+import client13 from "./images/clients/muhs.png";
 
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -23,26 +25,26 @@ const TrustedBy = () => {
             {
                 img: client1,
                 name: "Biju Patnaik State Police Academy",
-                url: "http://bpspaorissa.gov.in/",
-                fullName: "Biju Patnaik State Police Academy, Orissa"
+                url: "https://bpspaeprakshikshyan.in/",
+                fullName: "Biju Patnaik State Police Academy, Bhubaneswar, Odisha"
             },
             {
                 img: client2,
                 name: "Bureau of Police Research & Development",
-                url: "https://eustad.in/",
-                fullName: "Bureau of Police Research & Development, MHA"
+                url: "https://bprd.nic.in/",
+                fullName: "Bureau of Police Research & Development, Ministry of Home Affairs, Government of India"
             },
             {
                 img: client3,
                 name: "Centre for Development of Advanced Computing",
-                url: "https://cakes.cdac.in/MeghSikshak/",
-                fullName: "Centre for Development of Advanced Computing, MeitY"
+                url: "https://cakes.cdac.in",
+                fullName: "Centre for Development of Advanced Computing, MeitY, Government of India"
             },
             {
                 img: client4,
                 name: "Chariot Program",
                 url: "https://meghsikshak.in/chariot/",
-                fullName: "Chariot Program"
+                fullName: "Centre for Development of Advanced Computing, Hyderabad, MeitY, Government of India"
             }
         ],
         [
@@ -50,7 +52,7 @@ const TrustedBy = () => {
                 img: client5,
                 name: "Centre for Materials for Electronics Technology",
                 url: "https://kaushalvikas.coeonewaste.com/MeghSikshak/",
-                fullName: "Centre for Materials for Electronics Technology, GoI"
+                fullName: "Centre for Materials for Electronics Technology, MeitY, Government of India"
             },
             {
                 img: client6,
@@ -61,45 +63,59 @@ const TrustedBy = () => {
             {
                 img: client7,
                 name: "Department of Post",
-                url: "https://dakshiksha.gov.in/DakShiksha/",
-                fullName: "Department of Post, India"
+                url: "https://www.indiapost.gov.in/",
+                fullName: "Department of Posts, Ministry of Communications, Government of India"
             },
             {
                 img: client8,
                 name: "Kerala Police Academy",
                 url: "https://lms.keralapoliceacademy.gov.in/DKMS/",
-                fullName: "Kerala Police Academy, Thrissur"
-            }
+                fullName: "Kerala Police Academy, Thrissur, Kerala"
+            },
         ],
         [
             {
                 img: client9,
                 name: "Maharashtra Police Academy",
-                url: "https://www.mpa.com",
-                fullName: "Maharashtra Police Academy"
+                url: "https://eacademy.mpanashik.gov.in/",
+                fullName: "Maharashtra Police Academy, Nashik, Maharashtra"
             },
             {
                 img: client10,
                 name: "National Forensic Sciences University",
-                url: "https://www.nsfu.com",
-                fullName: "National Forensic Sciences University"
+                url: "https://nfsu.mha.gov.in/",
+                fullName: "National Forensic Sciences University, Ministry of Home Affairs, Government of India"
             },
             {
                 img: client11,
                 name: "Punjab Police Academy",
-                url: "https://www.ppa.com",
-                fullName: "Punjab Police Academy"
+                url: "https://etrainingppa.punjabpolice.gov.in/",
+                fullName: "Punjab Police Academy, Phillaur, Punjab"
+            },
+            {
+                img: client12,
+                name: "College of Military Engineering, Pune, Indian Army",
+                url: "#",
+                fullName: "College of Military Engineering, Pune, Indian Army"
+            }
+        ],
+        [
+            {
+                img: client13,
+                name: "Maharashtra University of Health Sciences, Nashik",
+                url: "https://eprabodhini.lms.muhs.ac.in/",
+                fullName: "Maharashtra University of Health Sciences, Nashik, DMED, Government of Maharashtra"
             }
         ]
     ];
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % clients.length);
-        }, 5000);
+    // useEffect(() => {
+    //     const timer = setInterval(() => {
+    //         setCurrentSlide((prev) => (prev + 1) % clients.length);
+    //     }, 5000);
 
-        return () => clearInterval(timer);
-    }, []);
+    //     return () => clearInterval(timer);
+    // }, []);
 
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % clients.length);
@@ -136,13 +152,13 @@ const TrustedBy = () => {
                     Our goal is to ensure our clients are guided and empowered to automate learning processes.
                 </p>
 
-                <div 
+                <div
                     className="relative overflow-hidden w-full mx-auto px-5 md:px-32"
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <div className="relative w-full min-h-[400px] sm:min-h-[250px] md:min-h-[250px]">
+                    <div className="relative w-full min-h-[400px] sm:min-h-[250px] md:min-h-[300px]">
                         {clients.map((slide, slideIndex) => (
                             <div
                                 key={slideIndex}
@@ -151,11 +167,11 @@ const TrustedBy = () => {
                                         slideIndex < currentSlide ? '-translate-x-full opacity-0' :
                                             'translate-x-full opacity-0'}`}
                             >
-                                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 justify-items-center">
+                                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 max-xl:gap-4 justify-items-center items-start">
                                     {slide.map((client, index) => (
-                                        <div 
+                                        <div
                                             key={index}
-                                            className="flex flex-col items-center justify-center w-full max-w-[200px] transform transition-transform duration-300 hover:scale-105"
+                                            className="flex flex-col items-center justify-center w-full max-w-[200px] transform transition-transform duration-300"
                                         >
                                             <div className="bg-white/80 rounded-lg p-4 sm:p-6 backdrop-blur-sm w-full flex justify-center items-center">
                                                 <img

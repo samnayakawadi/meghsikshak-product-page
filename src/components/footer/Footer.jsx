@@ -17,7 +17,7 @@ const Footer = () => {
                                 src={cdac}
                                 width="120"
                                 alt="CDAC Logo"
-                                className="rounded-full shadow-xl border-4 border-white/80 hover:scale-105 transition-transform duration-300"
+                                className="hover:scale-105 transition-transform duration-300"
                             />
                             {/* Subtle glow effect */}
                             <div className="absolute -inset-2 bg-white/20 rounded-full blur-xl -z-10"></div>
@@ -30,7 +30,7 @@ const Footer = () => {
                             Center for Development of Advanced Computing (C-DAC)
                         </h2>
                         <p className="text-white/80 text-sm">
-                            Empowering Technology, Transforming Lives
+                            Ministry of Electronics and Information Technology (MeitY), Government of India
                         </p>
                     </div>
 
