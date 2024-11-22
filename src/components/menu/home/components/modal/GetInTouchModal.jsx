@@ -26,18 +26,18 @@ const GetInTouchModal = () => {
 
                     <p className="pt-4 pb-2 font-bold text-2xl">Email</p>
                     <p className="text-lg font-light opacity-90">
-                        <span>meghsikshak@cdac.in</span>
+                        <span>&#109;&#101;&#103;&#104;&#115;&#105;&#107;&#115;&#104;&#97;&#107;&#64;&#99;&#100;&#97;&#99;&#46;&#105;&#110;</span>
                         <a
-                            href="mailto:meghsikshak@cdac.in"
+                            href="mailto:&#109;&#101;&#103;&#104;&#115;&#105;&#107;&#115;&#104;&#97;&#107;&#64;&#99;&#100;&#97;&#99;&#46;&#105;&#110;"
                             className="pl-2 text-lg hover:text-pink-400 transition-all"
                         >
                             <i className="fa-solid fa-arrow-up-right-from-square" />
                         </a>
                     </p>
                     <p className="text-lg font-light opacity-90">
-                        <span>chariot@cdac.in</span>
+                        <span>&#99;&#104;&#97;&#114;&#105;&#111;&#116;&#64;&#99;&#100;&#97;&#99;&#46;&#105;&#110;</span>
                         <a
-                            href="mailto:chariot@cdac.in"
+                            href="mailto:&#99;&#104;&#97;&#114;&#105;&#111;&#116;&#64;&#99;&#100;&#97;&#99;&#46;&#105;&#110;"
                             className="pl-2 text-lg hover:text-pink-400 transition-all"
                         >
                             <i className="fa-solid fa-arrow-up-right-from-square" />
@@ -46,9 +46,9 @@ const GetInTouchModal = () => {
 
                     <p className="pt-4 pb-2 font-bold text-2xl">Mobile</p>
                     <p className="text-lg font-light opacity-90">
-                        <span>+91 9182561076</span>
+                        <span>&#43;&#57;&#49;&#32;&#57;&#49;&#56;&#50;&#53;&#54;&#49;&#48;&#55;&#54;</span>
                         <a
-                            href="tel:+919182561076"
+                            href="tel:+91&#43;&#57;&#49;&#32;&#57;&#49;&#56;&#50;&#53;&#54;&#49;&#48;&#55;&#54;"
                             className="pl-2 text-lg hover:text-pink-400 transition-all"
                         >
                             <i className="fa-solid fa-arrow-up-right-from-square" />
