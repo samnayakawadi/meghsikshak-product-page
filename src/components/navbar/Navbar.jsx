@@ -16,7 +16,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div>
+        <div data-theme={theme}>
             {/* Navbar with gradient background */}
             <div className="navbar bg-gradient-to-r from-gray-50 to-gray-50 md:to-gray-50 text-black fixed w-full z-20 top-0 left-0 shadow-lg">
                 <div className="navbar-start">
@@ -69,7 +69,7 @@ const Navbar = () => {
                     <ul className="flex px-1 space-x-6 hover:cursor-pointer">
                         {menuItems.map((item, index) => (
                             <li key={index} className=" ">
-                                <a href={item.href} className="p-3 hover:bg-gray-500 hover:text-white">
+                                <a href={item.href} className="p-3 hover:bg-gray-400 hover:text-white">
                                     {item.name}
                                 </a>
                             </li>
@@ -79,7 +79,7 @@ const Navbar = () => {
 
                 {/* Theme and Call Actions on the Right */}
                 <div className="navbar-end gap-3">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className=" px-1">
                         {/* <li>
                             <a
                                 className="text-black"
@@ -100,7 +100,7 @@ const Navbar = () => {
                             </a>
                         </li> */}
                         <li>
-                            <a href="https://wa.link/kjwgg3" target="_blank" className="text-black md:mr-5" rel="noreferrer">
+                            <a href="https://wa.link/kjwgg3" target="_blank" className="text-black md:mr-5 hover:bg-gray-400 p-3 px-4" rel="noreferrer">
                                 <i className="fa-brands fa-whatsapp scale-150 text-green-500"></i>
                             </a>
                         </li>

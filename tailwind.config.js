@@ -1,14 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+import daisyui from "daisyui"
+
+export default {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'stats-bg': "url('/src/components/menu/home/components/images/stats/stats-bg.png')",
-      }
-    },
+    extend: {},
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    daisyui,
+  ],
+  daisyui: {
+    themes: ['lofi', 'light']
+  }
 }
