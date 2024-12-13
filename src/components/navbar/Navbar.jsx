@@ -72,7 +72,7 @@ const Navbar = () => {
 
                 <div className="navbar-center flex lg:hidden">
                     <a href="#" className="md:ml-5 btn btn-ghost normal-case text-xl text-black">
-                        <img width="180" className="max-w-xs" src={logo} alt="Logo" />
+                        <img width="180" className="max-w-xs max-sm:scale-75" src={logo} alt="Logo" />
                     </a>
                 </div>
 
@@ -90,8 +90,8 @@ const Navbar = () => {
                 </div>
 
                 {/* Theme and Call Actions on the Right */}
-                <div className="navbar-end gap-3">
-                    <ul className="px-1 flex gap-3 md:mr-5">
+                <div className="navbar-end gap-3 max-sm:gap-0">
+                    <ul className="px-1 flex gap-3 max-sm:gap-0 max-sm:mr-0 md:mr-5">
                         {/* <li>
                             <a
                                 className="text-black"
@@ -112,17 +112,22 @@ const Navbar = () => {
                             </a>
                         </li> */}
                         <li>
-                            <a href="https://wa.link/kjwgg3" target="_blank" className="text-black hover:cursor-pointer hover:bg-gray-400 p-3 px-4" rel="noreferrer">
-                                <i className="fa-brands fa-whatsapp scale-150 text-green-500"></i>
+                            <a
+                                href="https://wa.link/kjwgg3"
+                                target="_blank"
+                                className="text-black hover:cursor-pointer hover:bg-gray-400 focus:bg-white p-3 max-sm:p-1 flex items-center justify-center"
+                                rel="noreferrer"
+                            >
+                                <i className="fa-brands fa-whatsapp text-lg sm:scale-150 text-green-500"></i>
                             </a>
                         </li>
                         <li>
                             <a
-                                className="text-black hover:cursor-pointer hover:bg-gray-400 p-3 px-4"
+                                className="text-black hover:cursor-pointer hover:bg-gray-400 p-3 max-sm:p-1 focus:bg-white flex items-center justify-center"
                                 rel="noreferrer"
                                 onClick={() => { setIsGrayScale(prevState => !prevState) }}
                             >
-                                <i className="fa-solid fa-adjust scale-150 text-gray-500"></i>
+                                <i className="fa-solid fa-adjust text-lg sm:scale-150 text-gray-500"></i>
                             </a>
                         </li>
                     </ul>
