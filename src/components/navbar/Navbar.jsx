@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from "react";
 import logo from "./images/megh-logo-v2.png";
 
 const Navbar = () => {
@@ -14,6 +16,16 @@ const Navbar = () => {
         // { name: "Testimonials", href: "#testimonials" },
         { name: "Get in Touch", href: "#contact" },
     ];
+
+    const [isGrayScale, setIsGrayScale] = useState(false)
+
+    const applyGrayScaleHandler = () => {
+        document.body.style.filter = isGrayScale ? 'grayscale(100%)' : 'none';
+    }
+
+    useEffect(() => {
+        applyGrayScaleHandler()
+    }, [isGrayScale])
 
     return (
         <div data-theme={theme}>
@@ -79,7 +91,7 @@ const Navbar = () => {
 
                 {/* Theme and Call Actions on the Right */}
                 <div className="navbar-end gap-3">
-                    <ul className=" px-1">
+                    <ul className="px-1 flex gap-3 md:mr-5">
                         {/* <li>
                             <a
                                 className="text-black"
@@ -100,8 +112,17 @@ const Navbar = () => {
                             </a>
                         </li> */}
                         <li>
-                            <a href="https://wa.link/kjwgg3" target="_blank" className="text-black md:mr-5 hover:bg-gray-400 p-3 px-4" rel="noreferrer">
+                            <a href="https://wa.link/kjwgg3" target="_blank" className="text-black hover:cursor-pointer hover:bg-gray-400 p-3 px-4" rel="noreferrer">
                                 <i className="fa-brands fa-whatsapp scale-150 text-green-500"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                className="text-black hover:cursor-pointer hover:bg-gray-400 p-3 px-4"
+                                rel="noreferrer"
+                                onClick={() => { setIsGrayScale(prevState => !prevState) }}
+                            >
+                                <i className="fa-solid fa-adjust scale-150 text-gray-500"></i>
                             </a>
                         </li>
                     </ul>

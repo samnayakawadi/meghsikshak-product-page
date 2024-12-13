@@ -26,19 +26,19 @@ export default defineConfig({
         assetFileNames: ({ name }) => {
           if (name) {
             if (/\.(png|jpe?g)$/i.test(name)) {
-              return 'static/assets/images/[name].[hash][extname]';
+              return 'meghsikshak/assets/images/[name].[hash][extname]';
             }
             if (/\.(woff2?|ttf)$/i.test(name)) {
-              return 'static/assets/fonts/[name].[hash][extname]';
+              return 'meghsikshak/assets/fonts/[name].[hash][extname]';
             }
             if (name && name.endsWith('.css')) {
-              return 'static/css/[name].[hash][extname]';
+              return 'meghsikshak/css/[name].[hash][extname]';
             }
           }
-          return 'static/assets/[name].[hash][extname]'; // Default for other assets
+          return 'meghsikshak/assets/[name].[hash][extname]'; // Default for other assets
         },
-        chunkFileNames: 'static/js/[name].[hash].js', // Dynamic imports
-        entryFileNames: 'static/js/[name].[hash].js', // Main entry
+        chunkFileNames: 'meghsikshak/js/[name].[hash].js', // Dynamic imports
+        entryFileNames: 'meghsikshak/js/[name].[hash].js', // Main entry
       },
     }
   },
